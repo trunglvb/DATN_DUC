@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./App";
 import CCCDTab from "./pages/CCCD/index.tsx";
 import BHYT from "./pages/BHYT/index.tsx";
+import CCCDCTab from "./pages/CCCDC/index.tsx";
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -20,6 +21,14 @@ const router = createBrowserRouter([
 		element: (
 			<Layout>
 				<BHYT />
+			</Layout>
+		),
+	},
+	{
+		path: "/cccdc",
+		element: (
+			<Layout>
+				<CCCDCTab />
 			</Layout>
 		),
 	},

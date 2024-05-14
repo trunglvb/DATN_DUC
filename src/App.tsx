@@ -13,7 +13,7 @@ function Layout(props: IProps) {
 		<div className="p-5">
 			<div className="font-medium mb-10 text-2xl">Nhận diện ký tự</div>
 			<div className="font-medium mb-2">Chọn loại tài liệu</div>
-			<div className="flex w-full border border-gray-200 gap-4 p-4 rounded-md mb-8">
+			<div className="flex w-full border border-gray-200 gap-4 p-4 rounded-md mb-8 flex-wrap">
 				{buttons.map((button) => {
 					const { key, path, name } = button;
 					return (

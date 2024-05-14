@@ -4,12 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import InputFile from "../InputFile";
-import { IBHYT } from "@/types/bhyt.type";
 import Loading from "../Loading";
+import { IBHYT } from "@/types/bhyt.type";
+import { ICCCD } from "@/types/cccd.type";
+import { ICCCDC } from "@/types/cccdc.type";
 
 interface IProps {
 	onUpload?: (file?: File) => void;
-	data?: IBHYT;
+	data?: IBHYT | ICCCD | ICCCDC;
 	shimer?: boolean;
 	onLoadData?: () => void;
 	onDelete?: () => void;

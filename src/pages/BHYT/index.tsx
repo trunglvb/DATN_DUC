@@ -22,8 +22,8 @@ const BHYTTab = () => {
 			const formData = new FormData();
 			formData.append("img", file);
 			setIsLoading(true);
-			apis.getBHYT(formData).then((res) => {
-				const data = res?.data?.data;
+			apis.getData<IBHYT>(formData, "bhyt").then((res) => {
+				const data = res?.data?.data?.info;
 				setData(data);
 				setIsLoading(false);
 			});
@@ -55,19 +55,18 @@ const BHYTTab = () => {
 							<Loading />
 						</div>
 					)}
-					{dataDecoded.ho_va_ten ? (
+					{dataDecoded.hoten ? (
 						<div className="flex flex-1 flex-col gap-2 p-4 items-start text-white">
-							<div>Mã số: {dataDecoded.ma_so}</div>
-							<div>Họ và Tên: {dataDecoded.ho_va_ten}</div>
-							<div>Ngày sinh: {dataDecoded.ngay_sinh}</div>
-							<div>Giới tính: {dataDecoded.gioi_tinh}</div>
-							<div>Địa chỉ: {dataDecoded.dia_chi}</div>
-							<div>Nơi khám: {dataDecoded.noi_kham}</div>
-							<div>Mã nơi khám: {dataDecoded.ma}</div>
-							<div>
-								Ngày sử dụng: {dataDecoded.gia_tri_su_dung}
-							</div>
-							<div>Thời điểm đủ 5 năm: {dataDecoded.du_nam}</div>
+							<div>Mã số: {dataDecoded?.maso}</div>
+							<div>Họ và Tên: {dataDecoded?.hoten}</div>
+							<div>Ngày sinh: {dataDecoded?.ngaysinh}</div>
+							<div>Giới tính: {dataDecoded?.gioitinh}</div>
+							<div>Địa chỉ: {dataDecoded?.diachi}</div>
+							<div>Nơi cấp: {dataDecoded?.noicap}</div>
+							<div>Nơi khám: {dataDecoded?.noikham}</div>
+							<div>Mã nơi khám: {dataDecoded?.ma}</div>
+							<div>Ngày sử dụng: {dataDecoded?.giatrisd}</div>
+							<div>Thời điểm đủ 5 năm: {dataDecoded?.dunam}</div>
 						</div>
 					) : (
 						<>

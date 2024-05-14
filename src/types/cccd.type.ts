@@ -1,0 +1,26 @@
+export interface ICCCD {
+	gioitinh: null | string;
+	gioitinh_box: null | number[];
+	gioitinh_confidence: null | number;
+	gtriden: null | string;
+	gtriden_box: null | number[];
+	gtriden_confidence: null | number;
+	hoten: null | string;
+	hoten_box: null | number[];
+	hoten_confidence: null | number;
+	ngaysinh: null | string;
+	ngaysinh_box: null | number[];
+	ngaysinh_confidence: null | number;
+	noithuongtru: null | string;
+	noithuongtru_box: null | number[];
+	noithuongtru_confidence: null | number;
+	quequan: null | string;
+	quequan_box: null | number[];
+	quequan_confidence: null | number;
+	quoctich: null | string;
+	quoctich_box: null | number[];
+	quoctich_confidence: null | number;
+	so: null | string;
+	so_box: null | number[];
+	so_confidence: null | number;
+}

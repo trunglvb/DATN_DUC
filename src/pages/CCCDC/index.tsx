@@ -3,13 +3,13 @@ import Loading from "@/components/Loading";
 import Uploader from "@/components/Uploader";
 import { useEffect, useState } from "react";
 import { decodeUnicodeStrings } from "@/utils/utils";
-import { ICCCD } from "@/types/cccd.type";
+import { ICCCDC } from "@/types/cccdc.type";
 
-const CCCDTab = () => {
+const CCCDCTab = () => {
 	const [file, setFile] = useState<File>();
-	const [data, setData] = useState<ICCCD>();
+	const [data, setData] = useState<ICCCDC>();
 	const [isLoading, setIsLoading] = useState<boolean>();
-	const dataDecoded = decodeUnicodeStrings(data) as ICCCD;
+	const dataDecoded = decodeUnicodeStrings(data) as ICCCDC;
 
 	useEffect(() => {
 		if (!file) {
@@ -22,7 +22,7 @@ const CCCDTab = () => {
 			const formData = new FormData();
 			formData.append("img", file);
 			setIsLoading(true);
-			apis.getData<ICCCD>(formData, "cccd").then((res) => {
+			apis.getData<ICCCDC>(formData, "cccdc").then((res) => {
 				const data = res?.data?.data?.info;
 				setData(data);
 				setIsLoading(false);
@@ -55,7 +55,7 @@ const CCCDTab = () => {
 							<Loading />
 						</div>
 					)}
-					{dataDecoded.hoten ? (
+					{dataDecoded?.hoten ? (
 						<div className="flex flex-1 flex-col gap-2 p-4 items-start text-white">
 							<div>Họ tên: {dataDecoded?.hoten}</div>
 							<div>Ngày sinh: {dataDecoded?.ngaysinh}</div>
@@ -84,4 +84,4 @@ const CCCDTab = () => {
 	);
 };
 
-export default CCCDTab;
+export default CCCDCTab;

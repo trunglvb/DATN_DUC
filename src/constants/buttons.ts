@@ -5,24 +5,39 @@ const buttons = [
 		key: "cccd",
 	},
 	{
+		name: "Căn cước công dân gắn chip",
+		path: "/cccdc",
+		key: "cccdc",
+	},
+	{
+		name: "Chứng minh thư 9 số",
+		path: "/cmt9",
+		key: "cmt9",
+	},
+	{
+		name: "Chứng minh thư 12 số",
+		path: "/cmt12",
+		key: "cmt12",
+	},
+	{
 		name: "Thẻ BHYT",
 		path: "/bhyt",
 		key: "bhyt",
 	},
 	{
-		name: "Văn bản tổng quát",
-		path: "/vbtq",
-		key: "vbtq",
+		name: "Đăng ký xe",
+		path: "/dkx",
+		key: "dkx",
 	},
 	{
-		name: "Đăng ký bảo hiểm",
-		path: "/dkbh",
-		key: "dkbh",
+		name: "Giấy phép lái xe",
+		path: "/gplx",
+		key: "gplx",
 	},
 	{
-		name: "Visa",
-		path: "/visa",
-		key: "visa",
+		name: "Thẻ tổng quát",
+		path: "/ttq",
+		key: "ttq",
 	},
 ];
 

@@ -1,7 +1,6 @@
 export function decodeUnicodeStrings(data: any): any {
 	const decodedData: any = {};
 
-	// Check if data is not undefined or null
 	if (data && typeof data === "object") {
 		for (const [key, value] of Object.entries(data)) {
 			if (typeof value === "string") {
@@ -11,6 +10,5 @@ export function decodeUnicodeStrings(data: any): any {
 			}
 		}
 	}
-
 	return decodedData;
 }
